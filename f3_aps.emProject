@@ -1,0 +1,109 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="f3_aps" target="8" version="2">
+  <configuration
+    Name="Debug"
+    c_preprocessor_definitions="DEBUG"
+    gcc_debugging_level="Level 3"
+    gcc_omit_frame_pointer="Yes"
+    gcc_optimization_level="None" />
+  <configuration
+    Name="Release"
+    c_preprocessor_definitions="NDEBUG"
+    gcc_debugging_level="Level 2"
+    gcc_omit_frame_pointer="Yes"
+    gcc_optimization_level="Level 2 balanced" />
+  <project Name="f3_aps">
+    <configuration
+      LIBRARY_IO_TYPE="RTT"
+      Name="Common"
+      Target="STM32F303VCTx"
+      arm_architecture="v7EM"
+      arm_compiler_variant="SEGGER"
+      arm_core_type="Cortex-M4"
+      arm_endian="Little"
+      arm_fp_abi="Hard"
+      arm_fpu_type="FPv4-SP-D16"
+      arm_linker_heap_size="0"
+      arm_linker_process_stack_size="0"
+      arm_linker_stack_size="2048"
+      arm_linker_variant="SEGGER"
+      arm_rtl_variant="SEGGER"
+      arm_simulator_memory_simulation_parameter="ROM;0x08000000;0x00040000;RAM;0x10000000;0x00002000;RAM;0x20000000;0x0000A000"
+      arm_target_debug_interface_type="ADIv5"
+      arm_target_device_name="STM32F303VC"
+      arm_target_interface_type="SWD"
+      c_preprocessor_definitions="ARM_MATH_CM4;STM32F303xC;__STM32F303_SUBFAMILY;__STM32F3XX_FAMILY;STM32F30X;USE_STDPERIPH_DRIVER"
+      c_user_include_directories="$(ProjectDir)/CMSIS_5/CMSIS/Core/Include;$(ProjectDir)/inc;$(ProjectDir)/source/SPL/inc"
+      debug_register_definition_file="$(ProjectDir)/STM32F30x_Registers.xml"
+      debug_stack_pointer_start="__stack_end__"
+      debug_start_from_entry_point_symbol="Yes"
+      debug_target_connection="J-Link"
+      gcc_entry_point="Reset_Handler"
+      link_linker_script_file="$(ProjectDir)/STM32F3xx_Flash_CCM.icf"
+      linker_memory_map_file="$(ProjectDir)/STM32F303VCTx_MemoryMap.xml"
+      macros="DeviceHeaderFile=$(PackagesDir)/STM32F3xx/Device/Include/stm32f3xx.h;DeviceSystemFile=$(PackagesDir)/STM32F3xx/Device/Source/system_stm32f3xx.c;DeviceVectorsFile=$(PackagesDir)/STM32F3xx/Source/stm32f303xc_Vectors.s;DeviceFamily=STM32F3xx;DeviceSubFamily=STM32F303;Target=STM32F303VCTx"
+      project_directory=""
+      project_type="Executable"
+      target_reset_script="Reset();"
+      target_trace_initialize_script="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+    <folder Name="Script Files">
+      <file file_name="STM32F3xx/Scripts/STM32F3xx_Target.js">
+        <configuration Name="Common" file_type="Reset Script" />
+      </file>
+    </folder>
+    <folder Name="Sources">
+      <folder Name="SPL">
+        <folder Name="inc">
+          <file file_name="source/SPL/inc/stm32f30x_adc.h" />
+          <file file_name="source/SPL/inc/stm32f30x_dma.h" />
+          <file file_name="source/SPL/inc/stm32f30x_exti.h" />
+          <file file_name="source/SPL/inc/stm32f30x_flash.h" />
+          <file file_name="source/SPL/inc/stm32f30x_gpio.h" />
+          <file file_name="source/SPL/inc/stm32f30x_misc.h" />
+          <file file_name="source/SPL/inc/stm32f30x_pwr.h" />
+          <file file_name="source/SPL/inc/stm32f30x_spi.h" />
+          <file file_name="source/SPL/inc/stm32f30x_syscfg.h" />
+          <file file_name="source/SPL/inc/stm32f30x_tim.h" />
+          <file file_name="source/SPL/inc/stm32f30x_usart.h" />
+        </folder>
+        <folder Name="src">
+          <file file_name="source/SPL/src/stm32f30x_adc.c" />
+          <file file_name="source/SPL/src/stm32f30x_dma.c" />
+          <file file_name="source/SPL/src/stm32f30x_exti.c" />
+          <file file_name="source/SPL/src/stm32f30x_flash.c" />
+          <file file_name="source/SPL/src/stm32f30x_gpio.c" />
+          <file file_name="source/SPL/src/stm32f30x_misc.c" />
+          <file file_name="source/SPL/src/stm32f30x_pwr.c" />
+          <file file_name="source/SPL/src/stm32f30x_rcc.c" />
+          <file file_name="source/SPL/src/stm32f30x_spi.c" />
+          <file file_name="source/SPL/src/stm32f30x_syscfg.c" />
+          <file file_name="source/SPL/src/stm32f30x_tim.c" />
+          <file file_name="source/SPL/src/stm32f30x_usart.c" />
+        </folder>
+      </folder>
+      <file file_name="source/adc.c" />
+      <file file_name="source/main.c" />
+      <file file_name="source/stm32f30x_it.c" />
+      <file file_name="source/stm32f3_discovery.c" />
+      <file file_name="source/system_stm32f30x.c" />
+      <file file_name="source/timer.c" />
+    </folder>
+    <folder Name="System Files">
+      <file file_name="SEGGER_THUMB_Startup.s" />
+      <file file_name="STM32F3xx/Source/STM32F3xx_Startup.s" />
+      <file file_name="STM32F3xx/Source/stm32f303xc_Vectors.s">
+        <configuration Name="Common" file_type="Assembly" />
+      </file>
+    </folder>
+    <folder Name="inc">
+      <file file_name="inc/adc.h" />
+      <file file_name="inc/main.h" />
+      <file file_name="inc/stm32f30x.h" />
+      <file file_name="inc/stm32f30x_conf.h" />
+      <file file_name="inc/stm32f30x_it.h" />
+      <file file_name="inc/stm32f3_discovery.h" />
+      <file file_name="inc/system_stm32f30x.h" />
+      <file file_name="inc/timer.h" />
+    </folder>
+  </project>
+</solution>

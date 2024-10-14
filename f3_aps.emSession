@@ -1,0 +1,51 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints"/>
+ <ExecutionProfileWindow/>
+ <FrameBuffer/>
+ <Memory1/>
+ <Memory2/>
+ <Memory3/>
+ <Memory4/>
+ <Project>
+  <ProjectSessionItem path="f3_aps"/>
+  <ProjectSessionItem path="f3_aps;f3_aps"/>
+  <ProjectSessionItem path="f3_aps;f3_aps;Sources"/>
+  <ProjectSessionItem path="f3_aps;f3_aps;Sources;SPL"/>
+  <ProjectSessionItem path="f3_aps;f3_aps;System Files"/>
+ </Project>
+ <Register1/>
+ <Register2/>
+ <Register3/>
+ <Register4/>
+ <Threads>
+  <ThreadsWindow showLists=""/>
+ </Threads>
+ <TraceWindow>
+  <Trace enabled="Yes"/>
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never"/>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never"/>
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never"/>
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never"/>
+ </Watch4>
+ <Files>
+  <SessionOpenFile windowGroup="DockEditLeft" x="21" y="77" useTextEdit="1" path="source/main.c" left="0" top="62" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="9" y="248" useTextEdit="1" path="inc/stm32f30x.h" left="0" top="220" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="9" y="38" useTextEdit="1" path="inc/stm32f30x_conf.h" left="0" top="26" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="15" y="221" useTextEdit="1" path="source/stm32f30x_it.c" left="0" top="207" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="70" y="54" useTextEdit="1" path="source/adc.c" left="0" top="21" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="36" useTextEdit="1" path="inc/main.h" left="0" top="8" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="66" y="31" useTextEdit="1" path="source/timer.c" left="0" selected="1" top="28" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="3518" useTextEdit="1" openedFrom="/home/fm/dev/SeggerES/f3_aps/source/timer.c" path="source/SPL/src/stm32f30x_tim.c" left="0" top="3477" codecName="Default"/>
+ </Files>
+ <EMStudioWindow activeProject="f3_aps" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="/home/fm/dev/SeggerES/f3_aps/source/SPL/src" debugSearchPath="" autoConnectCapabilities="3199"/>
+</session>
